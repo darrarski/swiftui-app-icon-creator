@@ -1,9 +1,13 @@
 import SwiftUI
 
-struct IconView: View {
-  var size: CGFloat
+public struct IconView: View, Equatable {
+  public var size: CGFloat
 
-  var body: some View {
+  public init(size: CGFloat) {
+    self.size = size
+  }
+
+  public var body: some View {
     HStack(spacing: 0) {
       Color.red
       Color.green
