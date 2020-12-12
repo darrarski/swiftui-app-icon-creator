@@ -5,13 +5,12 @@ struct IconPreviews<Icon: View>: View {
   var configs: [IconConfig]
 
   var body: some View {
-    Group {
+    VStack(alignment: .leading, spacing: 16) {
       ForEach(configs) { config in
-        IconContainer(size: config.pointSize, content: icon)
-          .clipShape(RoundedRectangle(cornerRadius: config.pointSize * 0.2, style: .continuous))
-          .background(Color(.darkGray))
-          .previewDisplayName(config.id)
+        IconPreview(icon: icon, config: config)
       }
     }
+    .background(Color.white)
+    .fixedSize()
   }
 }
