@@ -13,11 +13,23 @@ let package = Package(
       targets: [
         "IconCreator"
       ]
+    ),
+    .executable(
+      name: "export",
+      targets: [
+        "Export"
+      ]
     )
   ],
   targets: [
     .target(
       name: "IconCreator"
+    ),
+    .target(
+      name: "Export",
+      dependencies: [
+        "IconCreator"
+      ]
     )
   ]
 )
