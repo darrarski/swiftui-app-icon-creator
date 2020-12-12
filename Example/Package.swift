@@ -28,7 +28,10 @@ let package = Package(
     .target(
       name: "ExampleAppIcon",
       dependencies: [
-        .product(name: "IconCreator", package: "swiftui-app-icon-creator")
+        .product(
+          name: "AppIconCreator",
+          package: "swiftui-app-icon-creator"
+        )
       ]
     ),
     .target(

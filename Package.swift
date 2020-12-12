@@ -9,15 +9,15 @@ let package = Package(
   ],
   products: [
     .library(
-      name: "IconCreator",
+      name: "AppIconCreator",
       targets: [
-        "IconCreator"
+        "AppIconCreator"
       ]
     )
   ],
   targets: [
     .target(
-      name: "IconCreator"
+      name: "AppIconCreator"
     )
   ]
 )

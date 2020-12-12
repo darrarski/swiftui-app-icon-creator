@@ -1,5 +1,5 @@
 import SwiftUI
-import IconCreator
+import AppIconCreator
 
 public struct ExampleAppIconView: View, Equatable {
   public init() {}

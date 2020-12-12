@@ -1,6 +1,6 @@
+import AppIconCreator
 import ExampleAppIcon
-import Foundation
-import IconCreator
+import struct Foundation.URL
 
 let icon = ExampleAppIconView()
 let configs = [IconConfig].iOS
