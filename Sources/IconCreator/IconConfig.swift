@@ -1,16 +1,22 @@
 import SwiftUI
 
-struct IconConfig: Equatable {
-  var name: String
-  var pointSize: CGFloat
-  var scales: [Int]
+public struct IconConfig: Equatable {
+  public var name: String
+  public var pointSize: CGFloat
+  public var scales: [Int]
+
+  public init(name: String, pointSize: CGFloat, scales: [Int]) {
+    self.name = name
+    self.pointSize = pointSize
+    self.scales = scales
+  }
 }
 
 extension IconConfig: Identifiable {
-  var id: String { "\(name) \(pointSizeString)" }
+  public var id: String { "\(name) \(pointSizeString)" }
 }
 
-extension IconConfig {
+public extension IconConfig {
   var pointSizeString: String {
     "\(Self.pointSizeFormatter.string(from: NSNumber(value: Float(pointSize)))!)pt"
   }
@@ -24,7 +30,7 @@ extension IconConfig {
   }()
 }
 
-extension Sequence where Element == IconConfig {
+public extension Sequence where Element == IconConfig {
   static var iOS: [Element] {[
     .iPhone_Notification,
     .iPhone_Settings,
@@ -39,7 +45,7 @@ extension Sequence where Element == IconConfig {
   ]}
 }
 
-extension IconConfig {
+public extension IconConfig {
   static let iPhone_Notification = IconConfig(name: "iPhone Notification", pointSize: 20, scales: [2, 3])
   static let iPhone_Settings = IconConfig(name: "iPhone Settings", pointSize: 29, scales: [2, 3])
   static let iPhone_Spotlight = IconConfig(name: "iPhone Spotlight", pointSize: 40, scales: [2, 3])
@@ -52,7 +58,7 @@ extension IconConfig {
   static let iOS_App_Store = IconConfig(name: "iOS App Store", pointSize: 1024, scales: [1])
 }
 
-extension Sequence where Element == IconConfig {
+public extension Sequence where Element == IconConfig {
   static var macOS: [IconConfig] {[
     .macOS_16pt,
     .macOS_32pt,
@@ -62,7 +68,7 @@ extension Sequence where Element == IconConfig {
   ]}
 }
 
-extension IconConfig {
+public extension IconConfig {
   static let macOS_16pt = IconConfig(name: "Mac", pointSize: 16, scales: [1, 2])
   static let macOS_32pt = IconConfig(name: "Mac", pointSize: 32, scales: [1, 2])
   static let macOS_128pt = IconConfig(name: "Mac", pointSize: 128, scales: [1, 2])
