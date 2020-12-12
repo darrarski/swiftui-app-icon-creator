@@ -1,11 +1,7 @@
 import SwiftUI
 
 public struct IconView: View, Equatable {
-  public var size: CGFloat
-
-  public init(size: CGFloat) {
-    self.size = size
-  }
+  public init() {}
 
   public var body: some View {
     HStack(spacing: 0) {
@@ -19,7 +15,7 @@ public struct IconView: View, Equatable {
 struct IconView_Preivews: PreviewProvider {
   static var previews: some View {
     IconPreviews(
-      icon: IconView.init(size:),
+      icon: IconView(),
       configs: .iOS
     )
   }

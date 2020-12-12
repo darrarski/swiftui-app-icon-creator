@@ -1,17 +1,22 @@
 import SwiftUI
 
-struct IconPreview<Icon: View>: View {
-  var icon: (CGFloat) -> Icon
-  var config: IconConfig
+public struct IconPreview<Icon: View>: View {
+  public var icon: Icon
+  public var config: IconConfig
 
-  var body: some View {
+  public init(icon: Icon, config: IconConfig) {
+    self.icon = icon
+    self.config = config
+  }
+
+  public var body: some View {
     VStack(alignment: .leading, spacing: 16) {
       Text(config.id).font(.title2)
       HStack(alignment: .top, spacing: 16) {
         ForEach(config.scales.sorted(by: >), id: \.self) { scale in
           VStack(alignment: .center, spacing: 8) {
             Text("\(scale)x").font(.title3)
-            iconView(scale: scale)
+            iconView(size: config.size, scale: scale)
           }
         }
       }
@@ -22,15 +27,11 @@ struct IconPreview<Icon: View>: View {
     .fixedSize()
   }
 
-  private func iconView(scale: Int) -> some View {
+  private func iconView(size: Float, scale: Int) -> some View {
     let screenScale = NSScreen.main!.backingScaleFactor
-    let size = CGFloat(config.size) * CGFloat(scale) / screenScale
-    return iconView(size: size)
-  }
-
-  private func iconView(size: CGFloat) -> some View {
-    icon(size)
-      .frame(width: size, height: size, alignment: .center)
-      .clipShape(RoundedRectangle(cornerRadius: size * 0.2, style: .continuous))
+    let viewSize = CGFloat(config.size) * CGFloat(scale) / screenScale
+    return icon
+      .frame(width: viewSize, height: viewSize, alignment: .center)
+      .clipShape(RoundedRectangle(cornerRadius: viewSize * 0.2, style: .continuous))
   }
 }
