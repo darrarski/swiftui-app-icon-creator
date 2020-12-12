@@ -5,11 +5,32 @@ public struct ExampleAppIconView: View, Equatable {
   public init() {}
 
   public var body: some View {
-    HStack(spacing: 0) {
-      Color.red
-      Color.green
-      Color.blue
+    GeometryReader { geometry in
+      Image(systemName: "leaf.fill")
+        .resizable()
+        .scaledToFit()
+        .font(Font.body.bold())
+        .overlayMask(LinearGradient(
+          gradient: Gradient(colors: [.green, .yellow]),
+          startPoint: .top,
+          endPoint: .bottom
+        ))
+        .padding(geometry.size.width * 0.15)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
+    .background(
+      LinearGradient(
+        gradient: Gradient(colors: [.blue, .purple]),
+        startPoint: .top,
+        endPoint: .bottom
+      )
+    )
+  }
+}
+
+extension View {
+  func overlayMask<Overlay: View>(_ overlay: Overlay) -> some View {
+    self.overlay(overlay).mask(self)
   }
 }
 
