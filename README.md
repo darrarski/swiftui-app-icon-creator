@@ -3,7 +3,9 @@
 ![Swift 5](https://img.shields.io/badge/swift-5-orange.svg)
 ![platform macOS 11](https://img.shields.io/badge/platform-macOS%2011-blue.svg)
 
-Create iOS and macOS application icon with SwiftUI
+Create iOS and macOS application icon in Xcode with SwiftUI
+
+![Creating app icon in Xcode - screenshot](screenshot_1.png)
 
 ## 📝 How to
 
