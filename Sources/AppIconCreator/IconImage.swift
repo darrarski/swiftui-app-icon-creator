@@ -36,7 +36,7 @@ public extension IconImage {
     let url = directoryUrl
       .appendingPathComponent(name)
       .appendingPathExtension("png")
-    try data.write(to: url)
+    try! data.write(to: url)
   }
 }
 
