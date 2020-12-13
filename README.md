@@ -7,6 +7,8 @@ Create iOS and macOS application icon in Xcode with SwiftUI
 
 ![Creating app icon in Xcode - screenshot](screenshot_1.png)
 
+*Xcode 12 and macOS 11 required*
+
 ## 📝 How to
 
 **TL;DR:** check out [example project](Example) in this repository.
