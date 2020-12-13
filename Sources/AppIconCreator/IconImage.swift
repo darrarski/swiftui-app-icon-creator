@@ -31,7 +31,11 @@ public extension Sequence where Element == IconImage {
 }
 
 public extension IconImage {
-  func save(to directoryUrl: URL) throws {
+  func save(to directoryUrl: URL) {
+    let fileManager = FileManager.default
+    if fileManager.fileExists(atPath: directoryUrl.path) == false {
+      try! fileManager.createDirectory(at: directoryUrl, withIntermediateDirectories: true)
+    }
     let data = image.pngData()
     let url = directoryUrl
       .appendingPathComponent(name)
