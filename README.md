@@ -13,6 +13,10 @@ Create iOS and macOS application icon with SwiftUI
 5. Add exporting code to `main.swift` in the executable target
 6. Run the executable from Xcode via command line to export your icon to images
 
+## ☕️ Do you like the project?
+
+<a href="https://www.buymeacoffee.com/darrarski" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 ## 📄 License
 
 Copyright © 2020 Dariusz Rybicki Darrarski
