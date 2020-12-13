@@ -1,5 +1,8 @@
 # SwiftUI App Icon Creator
 
+![Swift 5](https://img.shields.io/badge/swift-5-orange.svg)
+![platform macOS 11](https://img.shields.io/badge/platform-macOS%2011-blue.svg)
+
 Create iOS and macOS application icon with SwiftUI
 
 ## 📝 How to
@@ -15,7 +18,7 @@ Create iOS and macOS application icon with SwiftUI
 
 ## ☕️ Do you like the project?
 
-<a href="https://www.buymeacoffee.com/darrarski" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/darrarski" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" width="217" style="height: 20px !important;width: 217px !important;" ></a>
 
 ## 📄 License
 
