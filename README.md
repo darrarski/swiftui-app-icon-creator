@@ -106,7 +106,7 @@ In above example the images will be exported to `MyAppIcon` directory on current
 
 Make sure you have selected the build scheme connected with your executable target (`export` in this example).
 
-Images of your icon should be exported into a directory specified in `exportURL`.
+Images of your icon should be exported into a directory specified in `exportURL` variable.
 
 ## ☕️ Do you like the project?
 
