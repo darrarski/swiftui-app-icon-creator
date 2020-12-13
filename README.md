@@ -5,9 +5,16 @@
 
 Create iOS and macOS application icon in Xcode with SwiftUI
 
+*Xcode 12 and macOS 11 required*
+
 ![Creating app icon in Xcode - screenshot](screenshot_light.png)
 
-*Xcode 12 and macOS 11 required*
+<details>
+  <summary>Dark mode supported</summary>
+
+  ![Creating app icon in Xcode - screenshot](screenshot_dark.png)
+
+</details>
 
 ## 📝 How to
 
