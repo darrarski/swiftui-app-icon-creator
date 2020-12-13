@@ -12,3 +12,9 @@ Create iOS and macOS application icon with SwiftUI
 4. Use `IconPreviews` to live-preview your icon in Xcode
 5. Add exporting code to `main.swift` in the executable target
 6. Run the executable from Xcode via command line to export your icon to images
+
+## 📄 License
+
+Copyright © 2020 Dariusz Rybicki Darrarski
+
+License: [MIT](LICENSE)
