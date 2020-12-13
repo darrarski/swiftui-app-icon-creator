@@ -22,8 +22,6 @@ public struct IconPreview<Icon: View>: View {
       }
     }
     .padding()
-    .background(Color.white)
-    .environment(\.colorScheme, .light)
     .fixedSize()
   }
 
@@ -31,6 +29,8 @@ public struct IconPreview<Icon: View>: View {
     let screenScale = NSScreen.main!.backingScaleFactor
     let viewSize = CGFloat(config.size) * CGFloat(scale) / screenScale
     return icon
+      .background(Color.white)
+      .environment(\.colorScheme, .light)
       .frame(width: viewSize, height: viewSize, alignment: .center)
       .clipShape(RoundedRectangle(cornerRadius: viewSize * 0.2, style: .continuous))
   }

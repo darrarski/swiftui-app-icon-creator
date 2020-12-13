@@ -15,7 +15,6 @@ public struct IconPreviews<Icon: View>: View {
         IconPreview(icon: icon, config: config)
       }
     }
-    .background(Color.white)
     .fixedSize()
   }
 }
