@@ -9,7 +9,7 @@ Create iOS and macOS application icon with SwiftUI
 
 **TL;DR:** check out [example project](Example) in this repository.
 
-### 1. Create a new Swift Package
+#### 1️⃣ Create a new Swift Package
 
 Define two products in your `Package.swift`:
 
@@ -43,7 +43,7 @@ let package = Package(
 )
 ```
 
-### 2. Create icon view in the library taget, using SwiftUI
+#### 2️⃣ Create icon view in the library taget, using SwiftUI
 
 Just create a new SwiftUI view in the library target:
 
@@ -59,7 +59,7 @@ public struct MyAppIconView: View {
 }
 ```
 
-### 3. Use `IconPreviews` to live-preview your icon in Xcode
+#### 3️⃣ Use `IconPreviews` to live-preview your icon in Xcode
 
 Add this code to the file which contains your icon view:
 
@@ -82,7 +82,7 @@ You should be able to live-preview the icon in Xcode previews.
 
 You can adjust the `configs` parameter to specify which types of the icon you want to preview. Check out [`IconConfig.swift`](Sources/AppIconCreator/IconConfig.swift) for possible options.
 
-### 4. Add exporting code to the executable target
+#### 4️⃣ Add exporting code to the executable target
 
 Add this code to `main.swift` file in your executable target:
 
@@ -102,7 +102,7 @@ You can adjust the `configs` variable to specify which types of the icon you wan
 
 In above example the images will be exported to `MyAppIcon` directory on current user's desktop. Feel free to adjust the `exportURL` variable to your needs.
 
-### 5. Run the executable from Xcode to export your icon images
+#### 5️⃣ Run the executable from Xcode to export your icon images
 
 Make sure you have selected the build scheme connected with your executable target (`export` in this example).
 
