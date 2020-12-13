@@ -1,7 +1,7 @@
 import SwiftUI
 import AppIconCreator
 
-public struct ExampleAppIconView: View, Equatable {
+public struct ExampleAppIconView: View {
   public init() {}
 
   public var body: some View {
