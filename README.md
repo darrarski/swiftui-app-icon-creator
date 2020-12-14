@@ -54,7 +54,7 @@ let package = Package(
 )
 ```
 
-#### 2️⃣ Create icon view in the library taget, using SwiftUI
+#### 2️⃣ Create an icon view in the library target, using SwiftUI
 
 Just create a new SwiftUI view in the library target:
 
@@ -87,11 +87,11 @@ struct MyAppIconView_Preivews: PreviewProvider {
 }
 ```
 
-Make sure your have selected the build scheme connected with your library target (`MyAppIcon` in this example).
+Make sure you have selected the build scheme connected with your library target (`MyAppIcon` in this example).
 
 You should be able to live-preview the icon in Xcode previews.
 
-You can adjust the `configs` parameter to specify which types of the icon you want to preview. Check out [`IconConfig.swift`](Sources/AppIconCreator/IconConfig.swift) for possible options.
+You can adjust the `configs` parameter to specify which types of icons you want to preview. Check out [`IconConfig.swift`](Sources/AppIconCreator/IconConfig.swift) for possible options.
 
 #### 4️⃣ Add exporting code to the executable target
 
@@ -109,9 +109,9 @@ let exportURL = FileManager.default.homeDirectoryForCurrentUser.appendingPathCom
 images.forEach { $0.save(to: exportURL) }
 ```
 
-You can adjust the `configs` variable to specify which types of the icon you want to export. Check out [`IconConfig.swift`](Sources/AppIconCreator/IconConfig.swift) for possible options.
+You can adjust the `configs` variable to specify which types of icons you want to export. Check out [`IconConfig.swift`](Sources/AppIconCreator/IconConfig.swift) for possible options.
 
-In above example the images will be exported to `MyAppIcon` directory on current user's desktop. Feel free to adjust the `exportURL` variable to your needs.
+In the above example, the images will be exported to `MyAppIcon` directory on the current user's desktop. Feel free to adjust the `exportURL` variable to your needs.
 
 #### 5️⃣ Run the executable from Xcode to export your icon images
 
