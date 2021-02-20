@@ -53,7 +53,7 @@ public extension IconConfig {
   static let iPad_Notification = IconConfig(name: "iPad Notification", size: 20, scales: [1, 2])
   static let iPad_Settings = IconConfig(name: "iPad Settings", size: 29, scales: [1, 2])
   static let iPad_Spotlight = IconConfig(name: "iPad Spotlight", size: 40, scales: [1, 2])
-  static let iPad_App = IconConfig(name: "iPad App", size: 76, scales: [2, 3])
+  static let iPad_App = IconConfig(name: "iPad App", size: 76, scales: [1, 2])
   static let iPad_Pro_12_9_App = IconConfig(name: "iPad Pro (12.9-inch) App", size: 83.5, scales: [2])
   static let iOS_App_Store = IconConfig(name: "iOS App Store", size: 1024, scales: [1])
 }
