@@ -3,10 +3,12 @@ import SwiftUI
 public struct IconPreview<Icon: View>: View {
   public var icon: Icon
   public var config: IconConfig
+  public var clip: Bool
 
-  public init(icon: Icon, config: IconConfig) {
+  public init(icon: Icon, config: IconConfig, clip: Bool = true) {
     self.icon = icon
     self.config = config
+    self.clip = clip
   }
 
   public var body: some View {
@@ -29,9 +31,13 @@ public struct IconPreview<Icon: View>: View {
     let screenScale = NSScreen.main!.backingScaleFactor
     let viewSize = CGFloat(config.size) * CGFloat(scale) / screenScale
     return icon
-      .background(Color.white)
       .environment(\.colorScheme, .light)
       .frame(width: viewSize, height: viewSize, alignment: .center)
-      .clipShape(RoundedRectangle(cornerRadius: viewSize * 0.2, style: .continuous))
+      .if(clip) {
+        $0.clipShape(RoundedRectangle(
+          cornerRadius: viewSize * 0.2,
+          style: .continuous
+        ))
+      }
   }
 }
