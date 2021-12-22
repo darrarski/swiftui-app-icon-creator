@@ -14,9 +14,11 @@ public struct IconView: View, Equatable {
 
 struct IconView_Preivews: PreviewProvider {
   static var previews: some View {
+    #if os(macOS)
     IconPreviews(
       icon: IconView(),
       configs: .iOS
     )
+    #endif
   }
 }

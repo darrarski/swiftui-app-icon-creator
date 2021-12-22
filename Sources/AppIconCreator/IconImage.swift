@@ -1,3 +1,4 @@
+#if os(macOS)
 import SwiftUI
 
 public struct IconImage {
@@ -98,3 +99,4 @@ extension NSImage {
     return imageRep.representation(using: .png, properties: [.compressionFactor: 1])!
   }
 }
+#endif

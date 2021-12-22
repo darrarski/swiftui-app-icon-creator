@@ -1,3 +1,4 @@
+#if os(macOS)
 import SwiftUI
 
 public struct IconPreviews<Icon: View>: View {
@@ -20,3 +21,4 @@ public struct IconPreviews<Icon: View>: View {
     .fixedSize()
   }
 }
+#endif

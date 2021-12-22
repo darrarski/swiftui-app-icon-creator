@@ -1,3 +1,4 @@
+#if os(macOS)
 import SwiftUI
 
 public struct IconPreview<Icon: View>: View {
@@ -41,3 +42,4 @@ public struct IconPreview<Icon: View>: View {
       }
   }
 }
+#endif
